@@ -1,0 +1,10 @@
+//將txt內的表資料存到陣列空間
+/* input the dataSet */
+	for (int i = 0; i<rowLen; i++)
+	{
+		for (int j = 0; j<colLen; j++)
+		{
+			fin >> dataSet[i][j];
+		}
+		fin >> labels[i];
+	}
