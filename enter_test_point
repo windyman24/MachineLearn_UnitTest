@@ -1,0 +1,5 @@
+//輸入測試點
+	cout << "請輸入點座標:" << endl;
+	/* inuput the test data */
+	for (int i = 0; i<colLen; i++)
+		cin >> testData[i];
