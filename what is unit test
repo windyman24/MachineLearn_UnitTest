@@ -1,0 +1,27 @@
+what is unit test
+
+單元測試是一種可以協助軟體開發者,維護除錯功能驗證的一種概念及方法。可以使用軟體（stubs、mock或fake等）或是紙筆來做單元測試
+　　　優點：1.單元測試增加了更改/維護代碼的可信度。
+　　　　　　2.對任何代碼的更改的意外影響就會更小。
+　　　　　　3.代碼需要是模塊化的，更易於重用。　
+　　　　　　4.在單元測試期間檢測到的缺陷的固定成本較低。
+　　　　　　5.比較驗收測試期間或軟件運行時檢測到的缺陷的成本（時間，精力，破壞，羞辱）。
+　　　　　　6.測試失敗時，只需要調試最新的更改。通過更高級別的測試，需要掃描在幾天/幾週/幾個月內進行的更改。
+      
+單元測試步驟
+1.Find a tool/framework for your language.
+2.Do not create test cases for everything. Instead, focus on the tests that impact the behavior of the system.
+3.Isolate the development environment from the test environment.
+4.Use test data that is close to that of production.
+5.Before fixing a defect, write a test that exposes the defect. Why? First, you will later be able to catch the defect if you do not fix it properly. Second, your test suite is now more comprehensive. Third, you will most probably be too lazy to write the test after you have already fixed the defect.
+6.Write test cases that are independent of each other. For example, if a class depends on a database, do not write a case that interacts with the database to test the class. Instead, create an abstract interface around that database connection and implement that interface with a mock object.
+7.Aim at covering all paths through the unit. Pay particular attention to loop conditions.
+8.Make sure you are using a version control system to keep track of your test scripts.
+9.In addition to writing cases to verify the behavior, write cases to ensure the performance of the code.
+10.Perform unit tests continuously and frequently.
+
+
+
+參考網址
+http://softwaretestingfundamentals.com/unit-testing/
+https://en.wikipedia.org/wiki/Unit_testing
