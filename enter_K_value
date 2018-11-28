@@ -1,0 +1,7 @@
+/*
+ *輸入K值
+ */
+KNN::KNN(int k)
+{
+	this->k = k;
+}
