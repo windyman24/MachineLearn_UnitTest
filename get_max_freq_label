@@ -1,0 +1,29 @@
+void get_max_freq_label()
+{
+	//transform the map_index_dis to vec_index_dis
+	vector<PAIR> vec_index_dis(map_index_dis.begin(), map_index_dis.end());
+	//sort the vec_index_dis by distance from low to high to get the nearest data
+	sort(vec_index_dis.begin(), vec_index_dis.end(), CmpByValue());
+
+	for (int i = 0; i<k; i++)
+	{
+		cout << "the index = " << vec_index_dis[i].first << " the distance = " << vec_index_dis[i].second << " the label = " << labels[vec_index_dis[i].first] << " the coordinate ( " << dataSet[vec_index_dis[i].first][0] << "," << dataSet[vec_index_dis[i].first][1] << " )" << endl;
+		//calculate the count of each label
+		map_label_freq[labels[vec_index_dis[i].first]]++;
+	}
+
+	map<tLabel, int>::const_iterator map_it = map_label_freq.begin();
+	tLabel label;
+	int max_freq = 0;
+	//find the most frequent label
+	while (map_it != map_label_freq.end())
+	{
+		if (map_it->second > max_freq)
+		{
+			max_freq = map_it->second;
+			label = map_it->first;
+		}
+		map_it++;
+	}
+	cout << "測試點是屬於 " << label << " label" << endl;
+}
