@@ -1,0 +1,22 @@
+/*
+* calculate all the distance between test data and each training data
+*/
+void get_all_distance()
+{
+	double distance;
+	int i;
+	for (i = 0; i<rowLen; i++)
+	{
+		distance = get_distance(dataSet[i], testData);
+		//<key,value> => <i,distance>
+		map_index_dis[i] = distance;
+	}
+
+	//traverse the map to print the index and distance
+	map<int, double>::const_iterator it = map_index_dis.begin();
+	while (it != map_index_dis.end())
+	{
+		cout << "point" << it->first << ": distance = " << it->second << endl;
+		it++;
+	}
+}
